@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Styles from './styles/Styles'
+import Menu from './menu/Menu'
+
+const menuItems = [
+  {
+    id: 1,
+    type: 'Slice of Cheese',
+    price: 2,
+    qty: 0
+  },
+  {
+    id: 2,
+    type: 'Slice of Pepperoni',
+    price: 3,
+    qty: 0
+  },
+  {
+    id: 3,
+    type: 'Slice of Sausage',
+    price: 3,
+    qty: 0
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello from the App Component!</h1>
+      <Styles />
+      <Menu startingItems={menuItems} />
     </div>
   );
 }
-
 export default App;
